@@ -404,8 +404,10 @@ namespace CodeImp.DoomBuilder.BlockmapExplorer
 		// This redraws the display
 		public override void OnRedrawDisplay()
 		{
+			renderer.RedrawSurface();
+
 			// Render lines
-			if(renderer.StartPlotter(true))
+			if (renderer.StartPlotter(true))
 			{
 				int counter = 0;
 				List<int> lines = blockmapData.GetLinesInBlock(highlightedBlockCol, highlightedBlockRow);
